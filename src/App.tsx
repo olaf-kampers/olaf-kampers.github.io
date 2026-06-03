@@ -1,4 +1,6 @@
 import { profile } from './data/profile'
+import { projects } from './data/projects'
+import { ProjectCard } from './components/ProjectCard'
 
 function App() {
   return (
@@ -34,6 +36,21 @@ function App() {
           >
             Download Resume
           </a>
+        </div>
+      </section>
+      <section id="projects" className="mx-auto max-w-6xl px-6 py-24">
+        <p className="text-sm font-medium tracking-widest text-cyan-400">
+          FEATURED WORK
+        </p>
+
+        <h2 className="mt-3 text-3xl font-semibold text-white md:text-4xl">
+          Selected projects and systems
+        </h2>
+
+        <div className="mt-10 grid gap-6 lg:grid-cols-3">
+          {projects.map((project) => (
+            <ProjectCard key={project.title} project={project} />
+          ))}
         </div>
       </section>
     </main>
