@@ -6,39 +6,41 @@ export const experience = [
       period: '2020 — 2025',
       logo: '/logos/innov8ion.svg',
       summary:
-        'Full-stack software engineer at a Dutch tech consultancy, delivering production systems and data infrastructure for government and enterprise clients.',
+        'Worked as a full-stack software engineer at a Dutch tech consultancy, embedded full-time with enterprise and government clients to deliver production systems, data infrastructure, and workflow software.',
       highlights: [
-        'Led development on production web applications and custom workflow systems',
-        'Designed backend APIs, data models, validation logic, and integration layers',
-        'Worked across TypeScript, Node.js, PostgreSQL, cloud infrastructure, and CI/CD',
+        'Owned full-stack development across frontend, backend, integrations, and data workflows',
+        'Worked directly with client teams as an embedded engineer rather than a short-term implementation consultant',
+        'Contributed to architecture, production reliability, mentoring, and stakeholder alignment',
       ],
-    },
-    {
-      company: 'Alliander',
-      role: 'Full-Stack Engineer',
-      location: 'Arnhem, Netherlands',
-      period: '2023 — 2025',
-      logo: '/logos/alliander.svg',
-      summary:
-        'Built and evolved a production platform supporting contractors working on the Dutch national energy grid.',
-      highlights: [
-        'Owned full-stack features across user-facing views, backend services, and system integrations',
-        'Improved data retrieval and validation performance across critical workflows',
-        'Served as technical escalation point and supported architectural decision-making',
-      ],
-    },
-    {
-      company: 'Dutch Government',
-      role: 'Software Engineer',
-      location: 'Netherlands / Caribbean Netherlands',
-      period: '2020 — 2022',
-      logo: '/logos/rijksdienst.svg',
-      summary:
-        'Designed custom applications and data infrastructure supporting financial operations and ERP modernization.',
-      highlights: [
-        'Built software for financial and administrative workflows',
-        'Designed transformation, validation, and migration pipelines for sensitive data',
-        'Worked directly with users to translate operational processes into software systems',
+      engagements: [
+        {
+          client: 'Alliander',
+          role: 'Full-Stack Engineer',
+          location: 'Arnhem, Netherlands',
+          period: '2023 — 2025',
+          logo: '/logos/alliander.svg',
+          summary:
+            'Full-time client engagement building a production platform used by contractors working on the Dutch national energy grid.',
+          highlights: [
+            'Owned user-facing features, backend services, data models, and system integrations',
+            'Improved performance and reliability across critical data retrieval and validation workflows',
+            'Connected the platform with data warehouse, cloud infrastructure, and event-driven systems',
+          ],
+        },
+        {
+          client: 'Dutch Government',
+          role: 'Software Engineer',
+          location: 'Netherlands / Caribbean Netherlands',
+          period: '2020 — 2022',
+          logo: '/logos/rijksdienst.svg',
+          summary:
+            'Full-time client engagements modernizing financial operations through custom applications, data pipelines, and ERP-adjacent workflow software.',
+          highlights: [
+            'Built custom applications supporting financial and administrative processes',
+            'Designed transformation, validation, and migration pipelines for sensitive financial data',
+            'Worked directly with users to model operational workflows and translate them into reliable software',
+          ],
+        },
       ],
     },
     {
