@@ -1,6 +1,8 @@
 import { profile } from './data/profile'
 import { projects } from './data/projects'
 import { ProjectCard } from './components/ProjectCard'
+import { experience } from './data/experience'
+import { TimelineItem } from './components/TimelineItem'
 
 function App() {
   return (
@@ -30,11 +32,8 @@ function App() {
             View Projects
           </a>
 
-          <a
-            href={profile.links.resume}
-            className="rounded-full border border-slate-700 px-5 py-3 text-sm font-semibold text-slate-300 transition hover:border-cyan-400 hover:text-cyan-400"
-          >
-            Download Resume
+          <a href="#experience" className="hover:text-cyan-400">
+            Experience
           </a>
         </div>
       </section>
@@ -53,6 +52,26 @@ function App() {
           ))}
         </div>
       </section>
+      <section id="experience" className="mx-auto max-w-6xl px-6 py-24">
+        <p className="text-sm font-medium tracking-widest text-cyan-400">
+          EXPERIENCE
+        </p>
+
+        <h2 className="mt-3 text-3xl font-semibold text-white md:text-4xl">
+          Work history
+        </h2>
+
+        <p className="mt-4 max-w-2xl leading-8 text-slate-400">
+          A timeline of engineering, research, and product work across production
+          systems, financial workflows, infrastructure, and machine learning.
+        </p>
+
+        <div className="mt-12">
+          {experience.map((item) => (
+            <TimelineItem key={`${item.company}-${item.period}`} item={item} />
+          ))}
+        </div>
+    </section>
     </main>
   )
 }
