@@ -2,70 +2,67 @@ export const projects = [
     {
       title: 'National Energy Grid Platform',
       company: 'Alliander',
-      type: 'Distributed Systems / Full-Stack Engineering',
       period: '2023 — 2025',
-      description:
-        'Led development of a production platform used by thousands of contractors to coordinate updates to the Dutch national energy grid, combining user-facing applications, distributed integrations, and large-scale data processing.',
-      highlights: [
-        'Owned end-to-end delivery of features across TypeScript, Node.js, and cloud infrastructure',
-        'Redesigned core data models and APIs, improving performance and reliability across critical workflows',
-        'Built integrations connecting the platform to data warehouses, event-driven systems, and operational tooling',
-        'Served as technical lead for architectural decisions and incident response',
+      category: 'Distributed Systems / Full-Stack Engineering',
+      challenge:
+        'Support contractors coordinating updates to the Dutch national energy grid through a reliable production platform.',
+      role:
+        'Embedded full-stack engineer owning user-facing features, backend services, data models, and integrations.',
+      technicalFocus: [
+        'TypeScript and Node.js application development',
+        'PostgreSQL data modeling and query optimization',
+        'Distributed integrations across warehouse, cloud, and event-driven systems',
+        'CI/CD, code quality gates, and production reliability',
       ],
-      tech: [
-        'TypeScript',
-        'Node.js',
-        'SAP HANA Cloud',
-        'Snowflake',
-        'AWS',
-        'GitHub Actions',
-        'Distributed Systems',
+      impact: [
+        'Improved data retrieval and validation performance by roughly 30–50%',
+        'Supported daily workflows for thousands of contractors',
+        'Served as technical escalation point for incidents and architectural decisions',
       ],
+      tech: ['TypeScript', 'Node.js', 'PostgreSQL', 'AWS', 'GitHub Actions'],
     },
-  
     {
       title: 'Modernizing Government Financial Operations',
       company: 'Dutch Government',
-      type: 'Systems Engineering / Workflow Automation',
       period: '2020 — 2022',
-      description:
-        'Designed and delivered custom applications and data infrastructure supporting government financial operations, translating complex administrative workflows into reliable software systems.',
-      highlights: [
-        'Built custom applications supporting financial and administrative processes during ERP modernization initiatives',
-        'Designed validation, transformation, and migration pipelines for privacy-sensitive and financial datasets',
-        'Worked directly with end users to model operational workflows and translate them into software solutions',
-        'Led projects from requirements gathering through production rollout and user acceptance',
+      category: 'Workflow Software / Financial Systems',
+      challenge:
+        'Modernize complex government financial workflows around ERP systems, sensitive data, and local administrative processes.',
+      role:
+        'Designed and delivered custom applications, validation flows, and data infrastructure while working directly with end users.',
+      technicalFocus: [
+        'Custom application flows for financial operations',
+        'Data transformation and validation pipelines',
+        'Workflow modeling with government users',
+        'ERP-adjacent systems integration',
       ],
-      tech: [
-        'JavaScript',
-        'Node.js',
-        'Workflow Automation',
-        'Data Migration',
-        'Validation Pipelines',
-        'ERP Integration',
+      impact: [
+        'Translated complex operational processes into usable software',
+        'Supported migration and modernization of financial workflows',
+        'Delivered correctness-focused tooling for privacy-sensitive data',
       ],
+      tech: ['Application Design', 'Data Modeling', 'Workflow Automation', 'Validation Pipelines'],
     },
-  
     {
       title: 'Real-Time Anomaly Detection for Cryptocurrency Markets',
       company: 'ChainSlayer',
-      type: 'Machine Learning Research',
       period: '2019 — 2020',
-      description:
-        'Designed a streaming anomaly detection system for identifying market manipulation in cryptocurrency trading environments and published the results at ACM SAC 2022.',
-      highlights: [
-        'Developed a real-time detection pipeline combining Isolation Forest and Kernel Density Estimation',
-        'Addressed concept drift in non-stationary data streams using sliding-window techniques',
-        'Outperformed multiple baseline algorithms on benchmark datasets',
-        'Published and presented research at ACM SAC 2022',
+      category: 'Machine Learning Research',
+      challenge:
+        'Detect potential market manipulation in non-stationary cryptocurrency trading data streams.',
+      role:
+        'Designed and evaluated a streaming anomaly detection approach as part of applied machine learning research.',
+      technicalFocus: [
+        'Isolation Forest and Kernel Density Estimation',
+        'Sliding-window methods for concept drift',
+        'Feature engineering and benchmark evaluation',
+        'End-to-end experimentation pipelines in Python',
       ],
-      tech: [
-        'Python',
-        'Machine Learning',
-        'scikit-learn',
-        'Anomaly Detection',
-        'Streaming Data',
-        'Research',
+      impact: [
+        'Outperformed four baseline algorithms on benchmark datasets',
+        'Published and presented the research at ACM SAC 2022',
+        'Connected ML research with real-world financial anomaly detection',
       ],
+      tech: ['Python', 'scikit-learn', 'Anomaly Detection', 'Streaming Data'],
     },
   ]

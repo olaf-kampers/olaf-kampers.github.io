@@ -1,10 +1,12 @@
 type Project = {
     title: string
     company: string
-    type: string
     period: string
-    description: string
-    highlights: string[]
+    category: string
+    challenge: string
+    role: string
+    technicalFocus: string[]
+    impact: string[]
     tech: string[]
   }
   
@@ -24,18 +26,51 @@ type Project = {
           {project.title}
         </h3>
   
-        <p className="mt-1 text-sm text-slate-500">{project.type}</p>
+        <p className="mt-1 text-sm text-slate-500">{project.category}</p>
   
-        <p className="mt-4 leading-7 text-slate-400">{project.description}</p>
+        <div className="mt-6 space-y-5">
+          <div>
+            <h4 className="text-sm font-semibold uppercase tracking-widest text-slate-500">
+              Challenge
+            </h4>
+            <p className="mt-2 leading-7 text-slate-400">{project.challenge}</p>
+          </div>
   
-        <ul className="mt-5 space-y-2 text-sm text-slate-400">
-          {project.highlights.map((highlight) => (
-            <li key={highlight} className="flex gap-2">
-              <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-cyan-400" />
-              <span>{highlight}</span>
-            </li>
-          ))}
-        </ul>
+          <div>
+            <h4 className="text-sm font-semibold uppercase tracking-widest text-slate-500">
+              Role
+            </h4>
+            <p className="mt-2 leading-7 text-slate-400">{project.role}</p>
+          </div>
+  
+          <div>
+            <h4 className="text-sm font-semibold uppercase tracking-widest text-slate-500">
+              Technical Focus
+            </h4>
+            <ul className="mt-3 space-y-2 text-sm text-slate-400">
+              {project.technicalFocus.map((item) => (
+                <li key={item} className="flex gap-2">
+                  <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-cyan-400" />
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+  
+          <div>
+            <h4 className="text-sm font-semibold uppercase tracking-widest text-slate-500">
+              Impact
+            </h4>
+            <ul className="mt-3 space-y-2 text-sm text-slate-400">
+              {project.impact.map((item) => (
+                <li key={item} className="flex gap-2">
+                  <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-cyan-400" />
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
   
         <div className="mt-6 flex flex-wrap gap-2">
           {project.tech.map((tech) => (
