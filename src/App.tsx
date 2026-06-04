@@ -1,10 +1,12 @@
+import { CredentialCard } from './components/CredentialCard'
+import { education, certifications } from './data/credentials'
+import { experience } from './data/experience'
 import { profile } from './data/profile'
 import { projects } from './data/projects'
 import { ProjectCard } from './components/ProjectCard'
-import { experience } from './data/experience'
+import { publications } from './data/publications'
+import { PublicationCard } from './components/PublicationCard'
 import { TimelineItem } from './components/TimelineItem'
-import { education, certifications } from './data/credentials'
-import { CredentialCard } from './components/CredentialCard'
 
 function App() {
   return (
@@ -46,6 +48,13 @@ function App() {
             className="rounded-full bg-cyan-400 px-5 py-3 text-sm font-semibold text-slate-950 transition hover:bg-cyan-300"
           >
             Credentials
+          </a>
+
+          <a 
+            href="#publications" 
+            className="rounded-full bg-cyan-400 px-5 py-3 text-sm font-semibold text-slate-950 transition hover:bg-cyan-300"
+          >
+            Research
           </a>
         </div>
       </section>
@@ -118,6 +127,26 @@ function App() {
               <CredentialCard key={credential.title} credential={credential} />
             ))}
           </div>
+        </div>
+      </section>
+      <section id="publications" className="mx-auto max-w-6xl px-6 py-24">
+        <p className="text-sm font-medium tracking-widest text-cyan-400">
+          RESEARCH & PUBLICATIONS
+        </p>
+
+        <h2 className="mt-3 text-3xl font-semibold text-white md:text-4xl">
+          Applied machine learning research
+        </h2>
+
+        <p className="mt-4 max-w-2xl leading-8 text-slate-400">
+          Published research connecting anomaly detection, streaming data, and market
+          surveillance in cryptocurrency trading environments.
+        </p>
+
+        <div className="mt-10">
+          {publications.map((publication) => (
+            <PublicationCard key={publication.title} publication={publication} />
+          ))}
         </div>
       </section>
     </main>
