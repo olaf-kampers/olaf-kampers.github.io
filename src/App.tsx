@@ -1,6 +1,8 @@
 import { CredentialCard } from './components/CredentialCard'
 import { education, certifications } from './data/credentials'
 import { experience } from './data/experience'
+import { personalProjects } from './data/personalProjects'
+import { PersonalProjectCard } from './components/PersonalProjectCard'
 import { profile } from './data/profile'
 import { projects } from './data/projects'
 import { ProjectCard } from './components/ProjectCard'
@@ -55,6 +57,13 @@ function App() {
             className="rounded-full bg-cyan-400 px-5 py-3 text-sm font-semibold text-slate-950 transition hover:bg-cyan-300"
           >
             Research
+          </a>
+
+          <a 
+            href="#personal-projects" 
+            className="rounded-full bg-cyan-400 px-5 py-3 text-sm font-semibold text-slate-950 transition hover:bg-cyan-300"
+          >
+            Personal Projects
           </a>
         </div>
       </section>
@@ -146,6 +155,25 @@ function App() {
         <div className="mt-10">
           {publications.map((publication) => (
             <PublicationCard key={publication.title} publication={publication} />
+          ))}
+        </div>
+      </section>
+      <section id="personal-projects" className="mx-auto max-w-6xl px-6 py-24">
+        <p className="text-sm font-medium tracking-widest text-cyan-400">
+          PERSONAL PROJECTS
+        </p>
+
+        <h2 className="mt-3 text-3xl font-semibold text-white md:text-4xl">
+          Experiments and side projects
+        </h2>
+
+        <p className="mt-4 max-w-2xl leading-8 text-slate-400">
+          Smaller projects exploring AI interfaces, backend systems, and product ideas.
+        </p>
+
+        <div className="mt-10 grid gap-6 md:grid-cols-3">
+          {personalProjects.map((project) => (
+            <PersonalProjectCard key={project.title} project={project} />
           ))}
         </div>
       </section>
