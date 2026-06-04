@@ -3,6 +3,8 @@ import { projects } from './data/projects'
 import { ProjectCard } from './components/ProjectCard'
 import { experience } from './data/experience'
 import { TimelineItem } from './components/TimelineItem'
+import { education, certifications } from './data/credentials'
+import { CredentialCard } from './components/CredentialCard'
 
 function App() {
   return (
@@ -37,6 +39,13 @@ function App() {
             className="rounded-full bg-cyan-400 px-5 py-3 text-sm font-semibold text-slate-950 transition hover:bg-cyan-300"
           >
             Experience
+          </a>
+
+          <a 
+            href="#credentials" 
+            className="rounded-full bg-cyan-400 px-5 py-3 text-sm font-semibold text-slate-950 transition hover:bg-cyan-300"
+          >
+            Credentials
           </a>
         </div>
       </section>
@@ -74,7 +83,43 @@ function App() {
             <TimelineItem key={`${item.company}-${item.period}`} item={item} />
           ))}
         </div>
-    </section>
+      </section>
+      <section id="credentials" className="mx-auto max-w-6xl px-6 py-24">
+        <p className="text-sm font-medium tracking-widest text-cyan-400">
+          EDUCATION & PROFESSIONAL DEVELOPMENT
+        </p>
+
+        <h2 className="mt-3 text-3xl font-semibold text-white md:text-4xl">
+          Education & certifications
+        </h2>
+
+        <p className="mt-4 max-w-2xl leading-8 text-slate-400">
+          Formal training across computer science, artificial intelligence, software
+          engineering, and teaching.
+        </p>
+
+        <div className="mt-10">
+          <h3 className="text-lg font-semibold text-white">Academic background</h3>
+
+          <div className="mt-5 grid gap-6 md:grid-cols-3">
+            {education.map((credential) => (
+              <CredentialCard key={credential.title} credential={credential} />
+            ))}
+          </div>
+        </div>
+
+        <div className="mt-12">
+          <h3 className="text-lg font-semibold text-white">
+            Professional certifications
+          </h3>
+
+          <div className="mt-5 grid gap-6 md:grid-cols-3">
+            {certifications.map((credential) => (
+              <CredentialCard key={credential.title} credential={credential} />
+            ))}
+          </div>
+        </div>
+      </section>
     </main>
   )
 }
