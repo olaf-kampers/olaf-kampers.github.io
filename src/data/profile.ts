@@ -9,7 +9,6 @@ export const profile = {
     links: {
       email: 'mailto:olaf.kampers96@gmail.com',
       linkedin: 'https://www.linkedin.com/in/olaf-kampers',
-      github: 'https://github.com/olaf-kampers',
-      resume: '#',
+      github: 'https://github.com/olaf-kampers'
     },
   }

@@ -1,3 +1,5 @@
+import { AboutSection } from './components/AboutSection'
+import { ContactSection } from './components/ContactSection'
 import { CredentialCard } from './components/CredentialCard'
 import { education, certifications } from './data/credentials'
 import { experience } from './data/experience'
@@ -15,7 +17,7 @@ function App() {
     <main className="min-h-screen bg-slate-950 text-slate-100">
       <section className="mx-auto max-w-6xl px-6 py-28">
         <p className="mb-4 text-sm font-medium tracking-widest text-cyan-400">
-          REACT / TYPESCRIPT / FULL-STACK ENGINEERING
+          FULL-STACK ENGINEER / AI-NATIVE / PUBLISHED RESEARCH
         </p>
 
         <h1 className="text-5xl font-bold tracking-tight text-white md:text-7xl">
@@ -64,6 +66,46 @@ function App() {
             className="rounded-full bg-cyan-400 px-5 py-3 text-sm font-semibold text-slate-950 transition hover:bg-cyan-300"
           >
             Personal Projects
+          </a>
+
+          <a 
+            href="#about" 
+            className="rounded-full bg-cyan-400 px-5 py-3 text-sm font-semibold text-slate-950 transition hover:bg-cyan-300"
+          >
+            About
+          </a>
+
+          <a 
+            href="#contact" 
+            className="rounded-full bg-cyan-400 px-5 py-3 text-sm font-semibold text-slate-950 transition hover:bg-cyan-300"
+          >
+            Contact
+          </a>
+        </div>
+        <div className="mt-6 flex flex-wrap gap-5 text-sm text-slate-400">
+          <a
+            href={profile.links.github}
+            target="_blank"
+            rel="noreferrer"
+            className="transition hover:text-cyan-400"
+          >
+            GitHub ↗
+          </a>
+
+          <a
+            href={profile.links.linkedin}
+            target="_blank"
+            rel="noreferrer"
+            className="transition hover:text-cyan-400"
+          >
+            LinkedIn ↗
+          </a>
+
+          <a
+            href={profile.links.email}
+            className="transition hover:text-cyan-400"
+          >
+            Email ↗
           </a>
         </div>
       </section>
@@ -177,6 +219,8 @@ function App() {
           ))}
         </div>
       </section>
+      <AboutSection />
+      <ContactSection />
     </main>
   )
 }
