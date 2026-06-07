@@ -10,7 +10,7 @@ export function AboutSection() {
       <div className="mt-3 grid gap-10 lg:grid-cols-[1.2fr_0.8fr]">
         <div>
           <h2 className="text-3xl font-semibold text-white md:text-4xl">
-            A little beyond the résumé.
+          Engineering for complex systems and practical outcomes
           </h2>
 
           <div className="mt-6 space-y-5 text-lg leading-8 text-slate-400">
@@ -20,21 +20,43 @@ export function AboutSection() {
           </div>
         </div>
 
-        <div className="rounded-2xl border border-slate-800 bg-slate-900/30 p-6">
-          <h3 className="text-sm font-semibold uppercase tracking-widest text-slate-500">
-            Things I care about
-          </h3>
+        <div className="h-fit rounded-2xl border border-slate-800 bg-slate-900/30 p-6">
+            <h3 className="text-sm font-semibold uppercase tracking-widest text-slate-500">
+                Interests
+            </h3>
 
-          <div className="mt-5 flex flex-wrap gap-2">
-            {about.interests.map((interest) => (
-              <span
-                key={interest}
-                className="rounded-full bg-slate-800 px-3 py-2 text-sm font-medium text-slate-300"
-              >
-                {interest}
-              </span>
-            ))}
-          </div>
+            <div className="mt-5 flex flex-wrap gap-2">
+                {about.interests.map((interest) => (
+                <span
+                    key={interest}
+                    className="rounded-full bg-slate-800 px-3 py-2 text-sm font-medium text-slate-300"
+                >
+                    {interest}
+                </span>
+                ))}
+            </div>
+
+            <div className="mt-8 border-t border-slate-800 pt-6">
+                <h4 className="text-sm font-semibold uppercase tracking-widest text-slate-500">
+                Currently exploring
+                </h4>
+
+                <ul className="mt-4 space-y-3 text-sm text-slate-400">
+                    {about.current.map((activity, index) => (
+                        <li key={index}>{activity}</li>
+                    ))}
+                </ul>
+            </div>
+
+            <div className="mt-8 border-t border-slate-800 pt-6">
+                <h4 className="text-sm font-semibold uppercase tracking-widest text-slate-500">
+                Based in
+                </h4>
+
+                <p className="mt-3 text-sm text-slate-400">
+                San Francisco, CA, United States
+                </p>
+            </div>
         </div>
       </div>
 

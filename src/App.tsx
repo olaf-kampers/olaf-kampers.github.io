@@ -17,7 +17,7 @@ function App() {
     <main className="min-h-screen bg-slate-950 text-slate-100">
       <section className="mx-auto max-w-6xl px-6 py-28">
         <p className="mb-4 text-sm font-medium tracking-widest text-cyan-400">
-          FULL-STACK ENGINEER / AI-NATIVE / PUBLISHED RESEARCH
+          FULL-STACK SOFTWARE ENGINEER • AI-NATIVE • SAN FRANCISCO, CA
         </p>
 
         <h1 className="text-5xl font-bold tracking-tight text-white md:text-7xl">
@@ -100,13 +100,6 @@ function App() {
           >
             LinkedIn ↗
           </a>
-
-          <a
-            href={profile.links.email}
-            className="transition hover:text-cyan-400"
-          >
-            Email ↗
-          </a>
         </div>
       </section>
       <section id="projects" className="mx-auto max-w-6xl px-6 py-24">
@@ -115,7 +108,7 @@ function App() {
         </p>
 
         <h2 className="mt-3 text-3xl font-semibold text-white md:text-4xl">
-          Selected projects and systems
+          Selected Production Systems
         </h2>
 
         <div className="mt-10 grid gap-6 lg:grid-cols-3">
@@ -206,7 +199,7 @@ function App() {
         </p>
 
         <h2 className="mt-3 text-3xl font-semibold text-white md:text-4xl">
-          Experiments and side projects
+          Side projects and experiments
         </h2>
 
         <p className="mt-4 max-w-2xl leading-8 text-slate-400">

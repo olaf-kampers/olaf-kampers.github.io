@@ -4,6 +4,7 @@ type Engagement = {
   location: string
   period: string
   logo: string
+  tags?: string[]
   summary: string
   highlights: string[]
 }
@@ -15,6 +16,7 @@ type TimelineItemProps = {
     location: string
     period: string
     logo: string
+    tags?: string[]
     summary: string
     highlights: string[]
     engagements?: Engagement[]
@@ -40,9 +42,23 @@ export function TimelineItem({ item }: TimelineItemProps) {
       <div className="rounded-2xl border border-slate-800 bg-slate-900/30 p-6">
         <div>
           <h3 className="text-xl font-semibold text-white">{item.company}</h3>
+
           <p className="mt-1 text-sm font-medium text-cyan-400">
             {item.role}
           </p>
+
+          {item.tags && (
+            <div className="mt-4 flex flex-wrap gap-2">
+              {item.tags.map((tag) => (
+                <span
+                  key={tag}
+                  className="rounded-full bg-slate-800 px-3 py-1 text-xs font-medium text-slate-300"
+                >
+                  {tag}
+                </span>
+              ))}
+            </div>
+          )}
         </div>
 
         <p className="mt-4 leading-7 text-slate-400">{item.summary}</p>
@@ -85,6 +101,18 @@ export function TimelineItem({ item }: TimelineItemProps) {
                         <p className="mt-1 text-sm text-cyan-400">
                           {engagement.role}
                         </p>
+                        {engagement.tags && (
+                          <div className="mt-3 flex flex-wrap gap-2">
+                            {engagement.tags.map((tag) => (
+                              <span
+                                key={tag}
+                                className="rounded-full bg-slate-800 px-3 py-1 text-xs font-medium text-slate-300"
+                              >
+                                {tag}
+                              </span>
+                            ))}
+                          </div>
+                        )}
                       </div>
 
                       <div className="text-right text-sm text-slate-500">

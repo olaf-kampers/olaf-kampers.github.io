@@ -3,7 +3,7 @@ export const publications = [
       title:
         'Manipulation Detection in Cryptocurrency Markets: An Anomaly and Change Detection Based Approach',
       venue: 'ACM SAC',
-      type: 'Peer-reviewed Publication',
+      type: 'Conference Publication',
       year: '2022',
       description:
         'Research on detecting potential market manipulation in cryptocurrency markets using anomaly and change detection techniques for non-stationary data.',

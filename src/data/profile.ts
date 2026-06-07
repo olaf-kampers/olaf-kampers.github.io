@@ -3,7 +3,7 @@ export const profile = {
     role: 'Full-stack Software Engineer',
     location: 'San Francisco, CA',
     headline:
-      'Building reliable software for infrastructure, data, and AI-driven products.',
+      'Building reliable software for infrastructure, data, and AI-driven products',
     summary:
       'I’m a full-stack software engineer with 5+ years of production experience across TypeScript, Node.js, data infrastructure, and user-facing applications. I bring an AI background, published anomaly detection research, and experience mentoring and teaching computer science.',
     links: {

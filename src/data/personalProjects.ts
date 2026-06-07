@@ -3,7 +3,7 @@ export const personalProjects = [
       title: 'squishy-spaces',
       description: 'LLM interior design advice app.',
       category: 'AI / Product App',
-      tech: ['Kotlin', 'LLMs', 'Interior Design'],
+      tech: ['Kotlin', 'LLM Integration', 'Android'],
       githubUrl: 'https://github.com/olaf-kampers/squishy-spaces',
     },
     {

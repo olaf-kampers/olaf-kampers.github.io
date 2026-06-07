@@ -4,7 +4,8 @@ export const experience = [
       role: 'Software Engineer',
       location: 'Utrecht, Netherlands',
       period: '2020 — 2025',
-      logo: '/logos/innov8ion.svg',
+      logo: '/logos/innov8ion.jpeg',
+      tags: ['Full-stack', 'TypeScript', 'Node.js'],
       summary:
         'Worked as a full-stack software engineer at a Dutch tech consultancy, embedded full-time with enterprise and government clients to deliver production systems, data infrastructure, and workflow software.',
       highlights: [
@@ -18,7 +19,8 @@ export const experience = [
           role: 'Full-Stack Engineer',
           location: 'Arnhem, Netherlands',
           period: '2023 — 2025',
-          logo: '/logos/alliander.svg',
+          logo: '/logos/alliander.png',
+          tags: ['React', 'Node.js', 'Data pipelines'],
           summary:
             'Full-time client engagement building a production platform used by contractors working on the Dutch national energy grid.',
           highlights: [
@@ -32,7 +34,8 @@ export const experience = [
           role: 'Software Engineer',
           location: 'Netherlands / Caribbean Netherlands',
           period: '2020 — 2022',
-          logo: '/logos/rijksdienst.svg',
+          logo: '/logos/dutchgovernment.png',
+          tags: ['Data pipelines', 'JavaScript', 'ERP'],
           summary:
             'Full-time client engagements modernizing financial operations through custom applications, data pipelines, and ERP-adjacent workflow software.',
           highlights: [
@@ -48,27 +51,29 @@ export const experience = [
       role: 'Machine Learning Researcher',
       location: 'Utrecht, Netherlands',
       period: '2019 — 2020',
-      logo: '/logos/chainslayer.svg',
+      logo: '/logos/chainslayer.png',
+      tags: ['Startup', 'ML', 'Python'],
       summary:
         'Researched real-time anomaly detection methods for identifying manipulation in cryptocurrency markets.',
       highlights: [
         'Built streaming ML pipelines using Python and scikit-learn',
-        'Combined Isolation Forest and Kernel Density Estimation',
+        'Designed a custom unsupervised learning algorithm based on Isolation Forest and Kernel Density Estimation',
         'Published and presented research at ACM SAC 2022',
       ],
     },
     {
       company: 'Rentman',
-      role: 'Software Engineer',
+      role: 'Junior Software Engineer',
       location: 'Utrecht, Netherlands',
       period: '2016 — 2018',
       logo: '/logos/rentman.svg',
+      tags: ['Startup', 'PHP'],
       summary:
         'Built integrations for Rentman’s event production software platform.',
       highlights: [
         'Developed a WordPress plugin integrating Rentman with WooCommerce',
         'Enabled automated data synchronization across ecommerce workflows',
-        'Worked on production software early in my engineering career',
+        'Working directly with cofounders in a startup environment',
       ],
     },
   ]
