@@ -1,73 +1,58 @@
-# React + TypeScript + Vite
+# Olaf Kampers — Portfolio Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<p align="center">
+  <img src="https://media.giphy.com/media/l0HlNaQ6gWfllcjDO/giphy.gif" width="300" alt="This is fine dog">
+</p>
 
-Currently, two official plugins are available:
+<p align="center">
+  <strong>Full-Stack Software Engineer • AI-Native • Systems & Data Enthusiast</strong>
+</p>
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+<p align="center">
+  A personal portfolio website built with React, TypeScript, and Vite to showcase my experience, projects, education, and more.
+</p>
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🌐 Live Website
 
-## Expanding the ESLint configuration
+**Portfolio:** https://olaf-kampers.github.io
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## About
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+This repository contains the source code for my personal portfolio website, designed to serve as both an interactive resume and a showcase of selected work from my career.
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+Throughout my professional journey, I've worked across domains ranging from national energy infrastructure and government financial systems to AI research and startup environments. A recurring theme throughout these experiences has been improving complex software ecosystems through modernization, data quality initiatives, system integration, and practical problem solving.
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+The portfolio reflects both my technical experience and the interests that shape how I approach engineering: curiosity, creativity, teaching, and a willingness to explore unfamiliar territory.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+---
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## 🛠️ Tech Stack
+
+### Frontend
+
+- React
+- TypeScript
+- Vite
+- Tailwind CSS
+- Motion
+
+### Tooling
+
+- ESLint
+- npm
+- GitHub Actions
+- GitHub Pages
+
+---
+
+## 🚢 Deployment
+
+This project is automatically deployed to **GitHub Pages** using **GitHub Actions** whenever changes are pushed to the `main` branch.
+
+<p align="center">
+  Built with ❤️, React, and TypeScript.
+</p>

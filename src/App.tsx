@@ -21,15 +21,6 @@ function App() {
   const [chaosEnabled, setChaosEnabled] = useState(false)
   return (
     <main className="min-h-screen text-slate-100">
-      <section className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(34,211,238,0.10),transparent_35%)]" />
-
-        <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.035)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.035)_1px,transparent_1px)] bg-[size:48px_48px]" />
-
-        <div className="relative mx-auto grid max-w-6xl items-center gap-12 px-6 py-28 lg:grid-cols-[1.4fr_0.8fr]">
-          {/* your existing hero content goes here */}
-        </div>
-      </section>
       <section className="mx-auto grid max-w-6xl items-center gap-12 px-6 py-28 lg:grid-cols-[1.4fr_0.8fr]">
         <div>
           <p className="mb-4 text-sm font-medium tracking-widest text-cyan-400">
