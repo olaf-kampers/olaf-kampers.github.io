@@ -16,7 +16,7 @@ type Project = {
   
   export function ProjectCard({ project }: ProjectCardProps) {
     return (
-      <article className="rounded-2xl border border-slate-800 bg-slate-900/40 p-6 transition hover:border-cyan-400/50 hover:bg-slate-900/70">
+      <article className="rounded-2xl border border-slate-800 bg-slate-900/50 p-6 transition hover:border-cyan-400/50 hover:bg-slate-900/70">
         <div className="flex flex-wrap items-center justify-between gap-3">
           <p className="text-sm font-medium text-cyan-400">{project.company}</p>
           <p className="text-sm text-slate-500">{project.period}</p>

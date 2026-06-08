@@ -20,7 +20,7 @@ export function AboutSection() {
           </div>
         </div>
 
-        <div className="h-fit rounded-2xl border border-slate-800 bg-slate-900/30 p-6">
+        <div className="h-fit rounded-2xl border border-slate-800 bg-slate-900/50 p-6">
             <h3 className="text-sm font-semibold uppercase tracking-widest text-slate-500">
                 Interests
             </h3>

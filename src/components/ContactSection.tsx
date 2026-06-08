@@ -3,7 +3,7 @@ import { profile } from '../data/profile'
 export function ContactSection() {
   return (
     <section id="contact" className="mx-auto max-w-6xl px-6 py-24">
-      <div className="rounded-3xl border border-slate-800 bg-slate-900/40 p-8 md:p-10">
+      <div className="rounded-3xl border border-slate-800 bg-slate-900/50 p-8 md:p-10">
         <p className="text-sm font-medium tracking-widest text-cyan-400">
           CONTACT
         </p>

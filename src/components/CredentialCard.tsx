@@ -12,7 +12,7 @@ type Credential = {
   
   export function CredentialCard({ credential }: CredentialCardProps) {
     return (
-      <article className="rounded-2xl border border-slate-800 bg-slate-900/30 p-6">
+      <article className="rounded-2xl border border-slate-800 bg-slate-900/50 p-6">
         <div className="grid gap-3 sm:grid-cols-[1fr_auto]">
           <div>
             <p className="text-sm font-medium text-cyan-400">

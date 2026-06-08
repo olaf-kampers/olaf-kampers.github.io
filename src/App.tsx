@@ -3,6 +3,7 @@ import { ContactSection } from './components/ContactSection'
 import { CredentialCard } from './components/CredentialCard'
 import { education, certifications } from './data/credentials'
 import { experience } from './data/experience'
+import { HeroProfileCard } from './components/HeroProfileCard'
 import { personalProjects } from './data/personalProjects'
 import { PersonalProjectCard } from './components/PersonalProjectCard'
 import { profile } from './data/profile'
@@ -14,93 +15,75 @@ import { TimelineItem } from './components/TimelineItem'
 
 function App() {
   return (
-    <main className="min-h-screen bg-slate-950 text-slate-100">
-      <section className="mx-auto max-w-6xl px-6 py-28">
-        <p className="mb-4 text-sm font-medium tracking-widest text-cyan-400">
-          FULL-STACK SOFTWARE ENGINEER • AI-NATIVE • SAN FRANCISCO, CA
-        </p>
+    <main className="min-h-screen text-slate-100">
+      <section className="relative overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(34,211,238,0.10),transparent_35%)]" />
 
-        <h1 className="text-5xl font-bold tracking-tight text-white md:text-7xl">
-          {profile.name}
-        </h1>
+        <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.035)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.035)_1px,transparent_1px)] bg-[size:48px_48px]" />
 
-        <h2 className="mt-4 max-w-4xl text-3xl font-medium leading-tight text-slate-300 md:text-5xl">
-          {profile.headline}
-        </h2>
-
-        <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-400">
-          {profile.summary}
-        </p>
-
-        <div className="mt-10 flex flex-wrap gap-4">
-          <a
-            href="#projects"
-            className="rounded-full bg-cyan-400 px-5 py-3 text-sm font-semibold text-slate-950 transition hover:bg-cyan-300"
-          >
-            View Projects
-          </a>
-
-          <a 
-            href="#experience" 
-            className="rounded-full bg-cyan-400 px-5 py-3 text-sm font-semibold text-slate-950 transition hover:bg-cyan-300"
-          >
-            Experience
-          </a>
-
-          <a 
-            href="#credentials" 
-            className="rounded-full bg-cyan-400 px-5 py-3 text-sm font-semibold text-slate-950 transition hover:bg-cyan-300"
-          >
-            Credentials
-          </a>
-
-          <a 
-            href="#publications" 
-            className="rounded-full bg-cyan-400 px-5 py-3 text-sm font-semibold text-slate-950 transition hover:bg-cyan-300"
-          >
-            Research
-          </a>
-
-          <a 
-            href="#personal-projects" 
-            className="rounded-full bg-cyan-400 px-5 py-3 text-sm font-semibold text-slate-950 transition hover:bg-cyan-300"
-          >
-            Personal Projects
-          </a>
-
-          <a 
-            href="#about" 
-            className="rounded-full bg-cyan-400 px-5 py-3 text-sm font-semibold text-slate-950 transition hover:bg-cyan-300"
-          >
-            About
-          </a>
-
-          <a 
-            href="#contact" 
-            className="rounded-full bg-cyan-400 px-5 py-3 text-sm font-semibold text-slate-950 transition hover:bg-cyan-300"
-          >
-            Contact
-          </a>
+        <div className="relative mx-auto grid max-w-6xl items-center gap-12 px-6 py-28 lg:grid-cols-[1.4fr_0.8fr]">
+          {/* your existing hero content goes here */}
         </div>
-        <div className="mt-6 flex flex-wrap gap-5 text-sm text-slate-400">
-          <a
-            href={profile.links.github}
-            target="_blank"
-            rel="noreferrer"
-            className="transition hover:text-cyan-400"
-          >
-            GitHub ↗
-          </a>
+      </section>
+      <section className="mx-auto grid max-w-6xl items-center gap-12 px-6 py-28 lg:grid-cols-[1.4fr_0.8fr]">
+        <div>
+          <p className="mb-4 text-sm font-medium tracking-widest text-cyan-400">
+            FULL-STACK SOFTWARE ENGINEER • AI-NATIVE 
+          </p>
 
-          <a
-            href={profile.links.linkedin}
-            target="_blank"
-            rel="noreferrer"
-            className="transition hover:text-cyan-400"
-          >
-            LinkedIn ↗
-          </a>
+          <h1 className="text-5xl font-bold tracking-tight text-white md:text-7xl">
+            {profile.name}
+          </h1>
+
+          <h2 className="mt-4 max-w-4xl text-3xl font-medium leading-tight text-slate-300 md:text-5xl">
+            {profile.headline}
+          </h2>
+
+          <div className="mt-10 flex flex-wrap gap-4">
+
+            <a 
+              href="#experience" 
+              className="rounded-full bg-cyan-500 px-5 py-3 text-sm font-semibold text-slate-950 transition hover:bg-cyan-700"
+            >
+              View Experience
+            </a>
+
+            <a 
+              href="#personal-projects" 
+              className="rounded-full bg-cyan-500 px-5 py-3 text-sm font-semibold text-slate-950 transition hover:bg-cyan-700"
+            >
+              Personal Projects
+            </a>
+
+            <a 
+              href="#about" 
+              className="rounded-full bg-cyan-500 px-5 py-3 text-sm font-semibold text-slate-950 transition hover:bg-cyan-700"
+            >
+              About Me
+            </a>
+
+          </div>
+          <div className="mt-6 flex flex-wrap gap-5 text-sm text-slate-400">
+            <a
+              href={profile.links.github}
+              target="_blank"
+              rel="noreferrer"
+              className="transition hover:text-cyan-400"
+            >
+              GitHub ↗
+            </a>
+
+            <a
+              href={profile.links.linkedin}
+              target="_blank"
+              rel="noreferrer"
+              className="transition hover:text-cyan-400"
+            >
+              LinkedIn ↗
+            </a>
+          </div>
         </div>
+        <HeroProfileCard />
       </section>
       <section id="projects" className="mx-auto max-w-6xl px-6 py-24">
         <p className="text-sm font-medium tracking-widest text-cyan-400">

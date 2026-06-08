@@ -12,7 +12,7 @@ type PersonalProject = {
   
   export function PersonalProjectCard({ project }: PersonalProjectCardProps) {
     return (
-      <article className="rounded-2xl border border-slate-800 bg-slate-900/30 p-6 transition hover:border-cyan-400/50 hover:bg-slate-900/70">
+      <article className="rounded-2xl border border-slate-800 bg-slate-900/50 p-6 transition hover:border-cyan-400/50 hover:bg-slate-900/70">
         <p className="text-sm font-medium text-cyan-400">{project.category}</p>
   
         <h3 className="mt-3 text-xl font-semibold text-white">

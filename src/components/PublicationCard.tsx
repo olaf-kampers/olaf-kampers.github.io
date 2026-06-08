@@ -17,7 +17,7 @@ type Publication = {
   
   export function PublicationCard({ publication }: PublicationCardProps) {
     return (
-      <article className="rounded-2xl border border-slate-800 bg-slate-900/30 p-6">
+      <article className="rounded-2xl border border-slate-800 bg-slate-900/50 p-6">
         <div className="flex flex-wrap items-start justify-between gap-3">
           <div>
             <p className="text-sm font-medium text-cyan-400">
