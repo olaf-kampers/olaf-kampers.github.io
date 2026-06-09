@@ -1,6 +1,6 @@
 export function HeroProfileCard() {
     const stats = [
-      '5+ years production experience',
+      '7+ years production experience',
       'Published AI/ML research',
       'Full-stack systems engineering',
       'Data pipelines & modernization',

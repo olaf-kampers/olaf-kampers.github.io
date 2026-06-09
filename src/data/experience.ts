@@ -63,15 +63,15 @@ export const experience = [
     },
     {
       company: 'Rentman',
-      role: 'Junior Software Engineer',
+      role: 'Software Engineer',
       location: 'Utrecht, Netherlands',
       period: '2016 — 2018',
       logo: '/logos/rentman.svg',
-      tags: ['Startup', 'PHP'],
+      tags: ['Startup', 'B2B Saas', 'PHP'],
       summary:
         'Built integrations for Rentman’s event production software platform.',
       highlights: [
-        'Developed a WordPress plugin integrating Rentman with WooCommerce',
+        'Developed a WordPress plugin in PHP integrating Rentman with WooCommerce',
         'Enabled automated data synchronization across ecommerce workflows',
         'Working directly with cofounders in a startup environment',
       ],

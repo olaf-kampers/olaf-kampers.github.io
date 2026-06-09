@@ -29,6 +29,14 @@ body {
   background-size: 48px 48px;
 }
 
+@keyframes char-bounce {
+  0%   { transform: translateY(0) }
+  35%  { transform: translateY(-8px) }
+  65%  { transform: translateY(3px) }
+  82%  { transform: translateY(-3px) }
+  100% { transform: translateY(0) }
+}
+
 @keyframes electric-border {
   to {
     stroke-dashoffset: -32;

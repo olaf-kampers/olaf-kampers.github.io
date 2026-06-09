@@ -11,6 +11,7 @@
     "predeploy": "npm run build"
   },
   "dependencies": {
+    "@chenglou/pretext": "^0.0.7",
     "@fontsource/geist-sans": "^5.2.5",
     "@tailwindcss/vite": "^4.3.0",
     "motion": "^12.40.0",
