@@ -12,10 +12,10 @@ type PersonalProject = {
   
   export function PersonalProjectCard({ project }: PersonalProjectCardProps) {
     return (
-      <article className="rounded-2xl border border-slate-800 bg-slate-900/50 p-6 transition hover:border-cyan-400/50 hover:bg-slate-900/70">
-        <p className="text-sm font-medium text-cyan-400">{project.category}</p>
-  
-        <h3 className="mt-3 text-xl font-semibold text-white">
+      <article className="rounded-2xl border border-slate-800 bg-slate-900/50 p-6 transition hover:border-ocean-light/50 hover:bg-slate-900/70">
+        <p className="text-sm font-medium text-ocean-light">{project.category}</p>
+
+        <h3 className="mt-3 text-xl font-semibold text-ocean-cream">
           {project.title}
         </h3>
   
@@ -36,7 +36,7 @@ type PersonalProject = {
           href={project.githubUrl}
           target="_blank"
           rel="noreferrer"
-          className="mt-6 inline-flex text-sm font-semibold text-cyan-400 transition hover:text-cyan-300"
+          className="mt-6 inline-flex text-sm font-semibold text-ocean-light transition hover:text-ocean-cream"
         >
           View on GitHub →
         </a>

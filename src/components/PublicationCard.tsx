@@ -20,11 +20,11 @@ type Publication = {
       <article className="rounded-2xl border border-slate-800 bg-slate-900/50 p-6">
         <div className="flex flex-wrap items-start justify-between gap-3">
           <div>
-            <p className="text-sm font-medium text-cyan-400">
+            <p className="text-sm font-medium text-ocean-light">
               {publication.type}
             </p>
-  
-            <h3 className="mt-3 max-w-3xl text-2xl font-semibold text-white">
+
+            <h3 className="mt-3 max-w-3xl text-2xl font-semibold text-ocean-cream">
               {publication.title}
             </h3>
   
@@ -41,7 +41,7 @@ type Publication = {
         <ul className="mt-5 space-y-2 text-sm text-slate-400">
           {publication.highlights.map((highlight) => (
             <li key={highlight} className="flex gap-2">
-              <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-cyan-400" />
+              <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-ocean-light" />
               <span>{highlight}</span>
             </li>
           ))}
@@ -54,7 +54,7 @@ type Publication = {
               href={link.href}
               target="_blank"
               rel="noreferrer"
-              className="rounded-full border border-slate-700 px-4 py-2 text-sm font-semibold text-slate-300 transition hover:border-cyan-400 hover:text-cyan-400"
+              className="rounded-full border border-slate-700 px-4 py-2 text-sm font-semibold text-slate-300 transition hover:border-ocean-light hover:text-ocean-light"
             >
               {link.label}
             </a>

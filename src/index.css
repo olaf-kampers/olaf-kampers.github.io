@@ -1,6 +1,14 @@
 @import "@fontsource/geist-sans";
 @import "tailwindcss";
 
+@theme {
+  --color-ocean-red: #ee6c4d;
+  --color-ocean-cream: #e0fbfc;
+  --color-ocean-light: #98c1d9;
+  --color-ocean-blue: #3d5a80;
+  --color-ocean-navy: #293241;
+}
+
 :root {
   font-family: "Geist Sans", sans-serif;
   color: #e5e7eb;
@@ -13,7 +21,7 @@ html {
 body {
   margin: 0;
 
-  background-color: #020617;
+  background-color: #293241;
 
   background-image:
     linear-gradient(
@@ -50,8 +58,8 @@ body {
   opacity: 0;
 
   filter:
-    drop-shadow(0 0 2px rgba(34, 211, 238, 0.9))
-    drop-shadow(0 0 8px rgba(34, 211, 238, 0.25));
+    drop-shadow(0 0 2px rgba(238, 108, 77, 0.9))
+    drop-shadow(0 0 8px rgba(238, 108, 77, 0.25));
 
   transition: opacity 0.25s ease;
 }

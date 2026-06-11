@@ -9,7 +9,7 @@ export function FloatingControls() {
         type="button"
         onClick={scrollToTop}
         aria-label="Scroll to top"
-        className="flex h-12 w-12 items-center justify-center rounded-full border border-slate-700 bg-slate-900/80 text-lg text-slate-300 shadow-lg backdrop-blur-sm transition hover:border-cyan-400 hover:text-cyan-400"
+        className="flex h-12 w-12 items-center justify-center rounded-full border border-slate-700 bg-slate-900/80 text-lg text-slate-300 shadow-lg backdrop-blur-sm transition hover:border-ocean-light hover:text-ocean-light"
       >
         ↑
       </button>

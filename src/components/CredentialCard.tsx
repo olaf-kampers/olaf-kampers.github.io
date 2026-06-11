@@ -15,11 +15,11 @@ type Credential = {
       <article className="rounded-2xl border border-slate-800 bg-slate-900/50 p-6">
         <div className="grid gap-3 sm:grid-cols-[1fr_auto]">
           <div>
-            <p className="text-sm font-medium text-cyan-400">
+            <p className="text-sm font-medium text-ocean-light">
               {credential.type}
             </p>
-  
-            <h3 className="mt-3 text-xl font-semibold text-white">
+
+            <h3 className="mt-3 text-xl font-semibold text-ocean-cream">
               {credential.title}
             </h3>
   
@@ -34,7 +34,7 @@ type Credential = {
         <ul className="mt-5 space-y-2 text-sm text-slate-400">
           {credential.details.map((detail) => (
             <li key={detail} className="flex gap-2">
-              <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-cyan-400" />
+              <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-ocean-light" />
               <span>{detail}</span>
             </li>
           ))}

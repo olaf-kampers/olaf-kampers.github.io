@@ -16,13 +16,13 @@ type Project = {
   
   export function ProjectCard({ project }: ProjectCardProps) {
     return (
-      <article className="rounded-2xl border border-slate-800 bg-slate-900/50 p-6 transition hover:border-cyan-400/50 hover:bg-slate-900/70">
+      <article className="rounded-2xl border border-slate-800 bg-slate-900/50 p-6 transition hover:border-ocean-light/50 hover:bg-slate-900/70">
         <div className="flex flex-wrap items-center justify-between gap-3">
-          <p className="text-sm font-medium text-cyan-400">{project.company}</p>
+          <p className="text-sm font-medium text-ocean-light">{project.company}</p>
           <p className="text-sm text-slate-500">{project.period}</p>
         </div>
-  
-        <h3 className="mt-3 text-xl font-semibold text-white">
+
+        <h3 className="mt-3 text-xl font-semibold text-ocean-cream">
           {project.title}
         </h3>
   
@@ -50,7 +50,7 @@ type Project = {
             <ul className="mt-3 space-y-2 text-sm text-slate-400">
               {project.technicalFocus.map((item) => (
                 <li key={item} className="flex gap-2">
-                  <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-cyan-400" />
+                  <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-ocean-light" />
                   <span>{item}</span>
                 </li>
               ))}
@@ -64,7 +64,7 @@ type Project = {
             <ul className="mt-3 space-y-2 text-sm text-slate-400">
               {project.impact.map((item) => (
                 <li key={item} className="flex gap-2">
-                  <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-cyan-400" />
+                  <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-ocean-light" />
                   <span>{item}</span>
                 </li>
               ))}

@@ -21,7 +21,7 @@ export function HeroProfileCard() {
                     rx="6"
                     ry="6"
                     fill="none"
-                    stroke="rgba(34, 211, 238, 0.55)"
+                    stroke="rgba(238, 108, 77, 0.55)"
                     strokeWidth="0.4"
                     strokeLinecap="round"
                     strokeDasharray="6 10"
@@ -34,36 +34,36 @@ export function HeroProfileCard() {
                 rounded-3xl
                 border
                 border-slate-800
-                group-hover:border-cyan-500/20
-                group-hover:shadow-[0_0_40px_rgba(251,146,60,0.08)]
-                bg-slate-950/60
+                group-hover:border-ocean-red/20
+                group-hover:shadow-[0_0_40px_rgba(238,108,77,0.12)]
+                bg-slate-900/60
                 p-8
                 backdrop-blur-sm
                 transition-all
                 duration-300
                 ease-out
-                group-hover:bg-cyan-950/50
+                group-hover:bg-ocean-red/10
             ">
                 <div className="mt-6">
                     <div className="flex items-start gap-5">
                         <img
                             src="/olaf.png"
                             alt="Olaf Kampers"
-                            className="h-20 w-20 shrink-0 rounded-3xl object-cover ring-2 ring-cyan-400/30"
+                            className="h-20 w-20 shrink-0 rounded-3xl object-cover ring-2 ring-ocean-red/60"
                         />
 
                         <div className="pt-1">
-                            <p className="text-sm font-medium text-cyan-400">
+                            <p className="text-sm font-medium text-ocean-cream">
                             Full-Stack Software Engineer
                             </p>
 
-                            <h2 className="mt-2 text-2xm font-semibold leading-tight text-white">
+                            <h2 className="mt-2 text-2xm font-semibold leading-tight text-slate-400">
                             Systems, data, and AI-native engineering.
                             </h2>
                         </div>
                     </div>
 
-                    <p className="mt-6 leading-7 text-slate-400">
+                    <p className="mt-6 leading-7 text-ocean-cream">
                         Based in <b>San Francisco</b>, focused on reliable software for complex
                         operational environments.
                     </p>

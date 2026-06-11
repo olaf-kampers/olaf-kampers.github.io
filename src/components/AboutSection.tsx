@@ -2,12 +2,12 @@ import { about } from '../data/about'
 
 export function AboutSection() {
   return (
-    <section id="about" className="mx-auto max-w-6xl px-6 py-24">
-      <p className="text-sm font-medium tracking-widest text-cyan-400">ABOUT ME</p>
+    <section id="about" className="mx-auto max-w-6xl px-6 py-16">
+      <p className="text-sm font-medium tracking-widest text-ocean-light">ABOUT ME</p>
 
       <div className="mt-3 grid gap-10 lg:grid-cols-[1.2fr_0.8fr]">
         <div>
-          <h2 className="text-3xl font-semibold text-white md:text-4xl">
+          <h2 className="text-3xl font-semibold text-ocean-cream md:text-4xl">
             Engineering for complex systems and practical outcomes
           </h2>
 
@@ -49,7 +49,7 @@ export function AboutSection() {
       </div>
 
       <div className="mt-14">
-        <h3 className="text-xl font-semibold text-white">Outside of work</h3>
+        <h3 className="text-xl font-semibold text-ocean-cream">Outside of work</h3>
 
         <div className="mt-6 grid gap-6 md:grid-cols-3">
           {about.outsideWork.map((item) => (
@@ -63,7 +63,7 @@ export function AboutSection() {
                 className="h-56 w-full object-cover"
               />
               <div className="p-6">
-                <h4 className="text-lg font-semibold text-white">{item.title}</h4>
+                <h4 className="text-lg font-semibold text-ocean-cream">{item.title}</h4>
                 <p className="mt-3 leading-7 text-slate-400">{item.description}</p>
               </div>
             </article>

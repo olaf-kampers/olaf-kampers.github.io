@@ -25,7 +25,7 @@ type TimelineItemProps = {
 
 export function TimelineItem({ item }: TimelineItemProps) {
   return (
-    <article className="relative grid gap-6 border-l border-slate-800 pb-12 pl-8 md:grid-cols-[180px_1fr] md:gap-10">
+    <article className="relative grid gap-6 border-l border-slate-400 pb-12 pl-8 md:grid-cols-[180px_1fr] md:gap-10">
       <div className="absolute -left-6 top-0 flex h-12 w-12 items-center justify-center rounded-2xl border border-slate-800 bg-slate-950">
         <img
           src={item.logo}
@@ -34,7 +34,7 @@ export function TimelineItem({ item }: TimelineItemProps) {
         />
       </div>
 
-      <div className="pt-1 text-sm text-slate-500">
+      <div className="pt-1 text-sm text-slate-300">
         <p>{item.period}</p>
         <p className="mt-1">{item.location}</p>
       </div>
@@ -43,7 +43,7 @@ export function TimelineItem({ item }: TimelineItemProps) {
         <div>
           <h3 className="text-xl font-semibold text-white">{item.company}</h3>
 
-          <p className="mt-1 text-sm font-medium text-cyan-400">
+          <p className="mt-1 text-sm font-medium text-ocean-light">
             {item.role}
           </p>
 
@@ -66,7 +66,7 @@ export function TimelineItem({ item }: TimelineItemProps) {
         <ul className="mt-5 space-y-2 text-sm text-slate-400">
           {item.highlights.map((highlight) => (
             <li key={highlight} className="flex gap-2">
-              <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-cyan-400" />
+              <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-ocean-light" />
               <span>{highlight}</span>
             </li>
           ))}
@@ -81,7 +81,7 @@ export function TimelineItem({ item }: TimelineItemProps) {
             {item.engagements.map((engagement) => (
               <div
                 key={engagement.client}
-                className="rounded-2xl border border-slate-800 bg-slate-950/50 p-5"
+                className="rounded-2xl border border-slate-800 bg-slate-900/40 p-5"
               >
                 <div className="flex gap-4">
                   <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border border-slate-800 bg-slate-950">
@@ -95,10 +95,10 @@ export function TimelineItem({ item }: TimelineItemProps) {
                   <div className="min-w-0 flex-1">
                     <div className="flex flex-wrap items-start justify-between gap-2">
                       <div>
-                        <h4 className="font-semibold text-white">
+                        <h4 className="font-semibold text-ocean-cream">
                           {engagement.client}
                         </h4>
-                        <p className="mt-1 text-sm text-cyan-400">
+                        <p className="mt-1 text-sm text-ocean-light">
                           {engagement.role}
                         </p>
                         {engagement.tags && (
@@ -128,7 +128,7 @@ export function TimelineItem({ item }: TimelineItemProps) {
                     <ul className="mt-4 space-y-2 text-sm text-slate-400">
                       {engagement.highlights.map((highlight) => (
                         <li key={highlight} className="flex gap-2">
-                          <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-cyan-400/70" />
+                          <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-ocean-light/70" />
                           <span>{highlight}</span>
                         </li>
                       ))}
