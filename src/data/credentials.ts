@@ -4,6 +4,7 @@ export const education = [
       institution: 'Utrecht University',
       period: '2018 — 2020',
       type: 'Graduate Degree',
+      logo: '/logos/uu.png',
       details: [
         'Specialized in machine learning, anomaly detection, and applied AI',
         'Thesis: A Robust Anomaly Detector with Application in Cryptocurrency Markets',
@@ -15,6 +16,7 @@ export const education = [
       institution: 'Utrecht University',
       period: '2014 — 2018',
       type: 'Undergraduate Degree',
+      logo: '/logos/uu.png',
       details: [
         'Built a foundation in software engineering, algorithms, systems, and computer science theory',
         'Electives in mathematics and computer graphics'
@@ -25,6 +27,7 @@ export const education = [
       institution: 'Utrecht University',
       period: '2025 — 2026',
       type: 'Teaching Credential',
+      logo: '/logos/uu.png',
       details: [
         'Training in computer science education, curriculum design, and classroom instruction',
         'Internship at Kalsbeek College (12 months)'
@@ -38,6 +41,7 @@ export const certifications = [
     institution: 'Meta',
     period: 'Issued May 2026',
     type: 'Certification',
+    logo: '/logos/meta.png',
     details: ['React.js', 'JavaScript'],
 },
 {
@@ -45,6 +49,7 @@ export const certifications = [
     institution: 'Stanford Online',
     period: 'Issued Feb 2026',
     type: 'Certification',
+    logo: '/logos/stanford.png',
     details: ['Python', 'Machine Learning'],
 },
 {
@@ -52,6 +57,7 @@ export const certifications = [
     institution: 'Cambridge English',
     period: 'Issued Jul 2013',
     type: 'Credential',
+    logo: '/logos/cambridge.png',
     details: ['Grade A', 'CEFR Level C1/C2'],
 },
 ]

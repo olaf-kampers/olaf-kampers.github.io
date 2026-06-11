@@ -115,7 +115,7 @@ export function TimelineItem({ item }: TimelineItemProps) {
                         )}
                       </div>
 
-                      <div className="text-right text-sm text-slate-500">
+                      <div className="text-right text-sm text-slate-400">
                         <p>{engagement.period}</p>
                         <p>{engagement.location}</p>
                       </div>

@@ -23,25 +23,24 @@ export const projects = [
     },
     {
       title: 'Modernizing Government Financial Operations',
-      company: 'Dutch Government',
-      period: '2020 — 2022',
-      category: 'Workflow Software / Financial Systems',
+      company: 'Caribbean Netherlands',
+      period: '2021 — 2022',
+      category: 'Financial Systems / Workflow Engineering',
       challenge:
-        'Modernize government financial operations by migrating critical data from legacy systems while preserving data quality, regulatory compliance, and operational continuity.',
+        'Modernize critical government financial operations by replacing legacy processes, migrating sensitive financial data, and designing software that accommodated unique local regulatory requirements.',
       role:
-        'Led migration workstreams for critical financial datasets while translating complex administrative requirements into reliable software solutions.',
+        'Designed and implemented custom financial workflow applications while leading migration initiatives for business-critical datasets. Worked closely with end users to translate complex operational requirements into reliable, maintainable software solutions.',
       technicalFocus: [
-        'Migration strategies for large volumes of financial and operational data',
-        'Transformation and validation pipelines to ensure correctness and traceability',
-        'Custom workflow applications supporting financial business processes',
-        'Integration of legacy systems with modernized operational environments'
+        'Design and implementation of a custom invoice management application tailored to local government financial processes',
+        'Migration strategies for large volumes of financial and operational data from legacy environments',
+        'Transformation and validation pipelines to ensure correctness, traceability, and regulatory compliance'
       ],
       impact: [
-        'Enabled successful migration of business-critical financial datasets from legacy environments',
-        'Improved confidence in data quality through automated validation and reconciliation processes',
-        'Supported the evolution of government financial operations without disrupting day-to-day activities'
+        'Enabled modernization of government financial operations without disrupting day-to-day activities',
+        'Delivered software that supported region-specific invoicing and administrative requirements',
+        'Reduced operational risk by preserving data quality and business continuity throughout the transition'
       ],
-      tech: ['JavaScript', 'Data Migration', 'Validation Pipelines', 'ERP Integration'],
+      tech: ['JavaScript', 'Workflow Engineering', 'Data Migration', 'Validation Pipelines', 'ERP Integration'],
     },
     {
       title: 'Real-Time Anomaly Detection for Cryptocurrency Markets',

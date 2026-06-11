@@ -4,6 +4,7 @@ type Credential = {
     period: string
     type: string
     details: string[]
+    logo?: string
   }
   
   type CredentialCardProps = {
@@ -26,9 +27,21 @@ type Credential = {
             <p className="mt-1 text-slate-400">{credential.institution}</p>
           </div>
   
-            <p className="shrink-0 text-sm text-slate-500 sm:text-right">
-                {credential.period}
-            </p>
+            <div className="flex shrink-0 flex-col gap-3 sm:items-end">
+                <p className="text-sm text-slate-500 sm:text-right">
+                    {credential.period}
+                </p>
+
+                {credential.logo && (
+                  <div className="flex h-10 w-10 items-center justify-center rounded-xl border border-slate-800 bg-slate-950">
+                    <img
+                      src={credential.logo}
+                      alt={`${credential.institution} logo`}
+                      className="h-7 w-7 rounded-md object-contain"
+                    />
+                  </div>
+                )}
+            </div>
         </div>
   
         <ul className="mt-5 space-y-2 text-sm text-slate-400">
