@@ -1,5 +1,5 @@
 import { prepareWithSegments, layoutWithLines } from '@chenglou/pretext'
-import { useEffect, useMemo, useRef, useState } from 'react'
+import { useEffect, useMemo, useRef, useState, type CSSProperties } from 'react'
 
 type Highlight = {
   word: string
@@ -12,12 +12,22 @@ type ChaosTextProps = {
   enabled: boolean
   className?: string
   highlight?: Highlight
+  colorHover?: boolean
 }
 
 type Token = { chars: string[]; isSpace: boolean }
 
 const RADIUS = 160
 const MAX_PUSH = 50
+
+// Chaos mode wraps every grapheme in its own inline-block span so it can be
+// individually transformed, which prevents the browser from applying kerning
+// and ligatures across character boundaries. Disabling both here too keeps
+// glyph widths identical between modes, so toggling chaos doesn't reflow text.
+const TEXT_STYLE: CSSProperties = {
+  fontKerning: 'none',
+  fontVariantLigatures: 'none',
+}
 
 function randomColor() {
   return `hsl(${Math.floor(Math.random() * 360)}, 90%, 65%)`
@@ -87,7 +97,35 @@ function tokenize(text: string): Token[] {
   return tokens
 }
 
-export function ChaosText({ text, enabled, className, highlight }: ChaosTextProps) {
+// Wraps each non-space token in `white-space: nowrap` so hyphenated words
+// (e.g. "AI-driven") wrap as a unit instead of breaking after the hyphen,
+// matching how chaos mode keeps each token together.
+function renderWords(tokens: Token[]) {
+  return tokens.map((token, i) => {
+    const str = token.chars.join('')
+    return token.isSpace
+      ? str
+      : <span key={i} style={{ whiteSpace: 'nowrap' }}>{str}</span>
+  })
+}
+
+// Same per-character hover color + bounce effect as a highlighted word,
+// applied to every character with no click handler and no color override
+// otherwise. Only used in non-chaos mode, so bouncing is safe to enable.
+function renderColorHoverWords(tokens: Token[]) {
+  return tokens.map((token, i) => {
+    if (token.isSpace) return token.chars.join('')
+    return (
+      <span key={i} style={{ whiteSpace: 'nowrap' }}>
+        {token.chars.map((char, ci) => (
+          <HighlightChar key={ci} char={char} baseColor="inherit" bounceEnabled={true} />
+        ))}
+      </span>
+    )
+  })
+}
+
+export function ChaosText({ text, enabled, className, highlight, colorHover }: ChaosTextProps) {
   const containerRef = useRef<HTMLSpanElement>(null)
   const charRefsRef = useRef<(HTMLSpanElement | null)[]>([])
   const cursorRef = useRef({ x: -9999, y: -9999 })
@@ -197,17 +235,19 @@ export function ChaosText({ text, enabled, className, highlight }: ChaosTextProp
 
   // Non-chaos path
   if (!enabled) {
-    if (!highlight) return <span className={className}>{text}</span>
+    const words = colorHover ? renderColorHoverWords(tokens) : renderWords(tokens)
+
+    if (!highlight) return <span className={className} style={TEXT_STYLE}>{words}</span>
 
     const wordIdx = text.indexOf(highlight.word)
-    if (wordIdx === -1) return <span className={className}>{text}</span>
+    if (wordIdx === -1) return <span className={className} style={TEXT_STYLE}>{words}</span>
 
     const wordChars = [
       ...new Intl.Segmenter(undefined, { granularity: 'grapheme' }).segment(highlight.word),
     ].map(s => s.segment)
 
     return (
-      <span className={className}>
+      <span className={className} style={TEXT_STYLE}>
         {text.slice(0, wordIdx)}
         <button
           onClick={highlight.onClick}
@@ -224,7 +264,7 @@ export function ChaosText({ text, enabled, className, highlight }: ChaosTextProp
 
   // Chaos path
   return (
-    <span ref={containerRef} className={className}>
+    <span ref={containerRef} className={className} style={TEXT_STYLE}>
       {tokens.map((token, tokenIdx) => {
         const start = tokenStartIdx[tokenIdx]
         const isHighlighted = !token.isSpace && highlight?.word === token.chars.join('')
@@ -264,15 +304,25 @@ export function ChaosText({ text, enabled, className, highlight }: ChaosTextProp
 
         return (
           <span key={tokenIdx} style={{ display: 'inline', whiteSpace: 'nowrap' }}>
-            {token.chars.map((char, ci) => (
-              <span
-                key={ci}
-                ref={el => { charRefsRef.current[start + ci] = el }}
-                style={{ display: 'inline-block', whiteSpace: 'pre' }}
-              >
-                {char}
-              </span>
-            ))}
+            {token.chars.map((char, ci) =>
+              colorHover ? (
+                <HighlightChar
+                  key={ci}
+                  char={char}
+                  baseColor="inherit"
+                  bounceEnabled={false}
+                  innerRef={el => { charRefsRef.current[start + ci] = el }}
+                />
+              ) : (
+                <span
+                  key={ci}
+                  ref={el => { charRefsRef.current[start + ci] = el }}
+                  style={{ display: 'inline-block', whiteSpace: 'pre' }}
+                >
+                  {char}
+                </span>
+              )
+            )}
           </span>
         )
       })}

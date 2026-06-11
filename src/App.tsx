@@ -28,7 +28,7 @@ function App() {
           </p>
 
           <h1 className="text-5xl font-bold tracking-tight text-ocean-cream md:text-7xl">
-            <ChaosText text={profile.name} enabled={chaosEnabled} />
+            <ChaosText text={profile.name} enabled={chaosEnabled} colorHover />
           </h1>
 
           <h2 className="mt-4 max-w-4xl text-3xl font-medium leading-tight md:text-5xl">
@@ -91,7 +91,7 @@ function App() {
         <HeroProfileCard />
       </section>
 
-      <section id="projects" className="mx-auto max-w-6xl px-6 py-12">
+      <section id="projects" className="mx-auto max-w-6xl px-6 py-8">
         <p className="text-sm font-medium tracking-widest text-ocean-light">Featured Projects</p>
         <h2 className="mt-3 text-3xl font-semibold text-ocean-cream md:text-4xl">Selected Production Systems</h2>
         <div className="mt-10 grid gap-6 lg:grid-cols-3">

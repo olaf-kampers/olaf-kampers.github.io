@@ -46,11 +46,18 @@ export function HeroProfileCard() {
             ">
                 <div className="mt-6">
                     <div className="flex items-start gap-5">
-                        <img
-                            src="/olaf.png"
-                            alt="Olaf Kampers"
-                            className="h-20 w-20 shrink-0 rounded-3xl object-cover ring-2 ring-ocean-red/60"
-                        />
+                        <div className="relative h-20 w-20 shrink-0">
+                            <img
+                                src="/olaf.png"
+                                alt="Olaf Kampers"
+                                className="h-20 w-20 rounded-3xl object-cover ring-2 ring-ocean-red/60 transition-opacity duration-300 group-hover:opacity-0"
+                            />
+                            <img
+                                src="/olaf_active.png"
+                                alt=""
+                                className="absolute inset-0 h-20 w-20 rounded-3xl object-cover opacity-0 ring-2 ring-ocean-red/60 transition-opacity duration-300 group-hover:opacity-100"
+                            />
+                        </div>
 
                         <div className="pt-1">
                             <p className="text-sm font-medium text-ocean-cream">
